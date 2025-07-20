@@ -23,60 +23,60 @@ Variables allow you to store values that can be reused throughout your styleshee
 $primary-color: #333;
 $font-stack: Helvetica, sans-serif;
 
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
-}
+body {  
+  font: 100% $font-stack;  
+  color: $primary-color;  
+}  
 
 #### Nesting
 
 Nesting enables you to write CSS rules in a hierarchical structure that mirrors the HTML structure, improving readability and organization.
 
-nav {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  li {
-    display: inline-block;
-  }
-  a {
-    display: block;
-    padding: 6px 12px;
-    text-decoration: none;
-  }
-}
+nav {  
+  ul {  
+    margin: 0;  
+    padding: 0;  
+    list-style: none;  
+  }  
+  li {  
+    display: inline-block;  
+  }  
+  a {  
+    display: block;  
+    padding: 6px 12px;  
+    text-decoration: none;  
+  }  
+}  
 
 ### Mixins and Functions
 #### Mixins
 
 Mixins allow you to create reusable chunks of CSS. You can pass arguments to mixins to make them more flexible.
 
-@mixin theme($theme: DarkGray) {
-  background: $theme;
-  box-shadow: 0 0 1px rgba($theme, 0.25);
-  color: #fff;
-}
+@mixin theme($theme: DarkGray) {  
+  background: $theme;  
+  box-shadow: 0 0 1px rgba($theme, 0.25);  
+  color: #fff;  
+}  
 
-.info {
-  @include theme;
-}
-.alert {
-  @include theme(DarkRed);
-}
+.info {  
+  @include theme;  
+}  
+.alert {  
+  @include theme(DarkRed);  
+}  
 
 #### Functions
 
 SASS functions let you perform calculations and return values. They are useful for creating dynamic styles.
 
-@function double($number) {
-  @return $number * 2;
-}
+@function double($number) {  
+  @return $number * 2;  
+}  
 
-.box {
-  width: double(20px);
-}
+.box {  
+  width: double(20px);  
+}  
 
 ### Partials and Import
 #### Partials
@@ -89,9 +89,9 @@ Importing Partials You can import partials into your main SASS file using the @u
 @use 'variables';  
 @use 'mixins';  
 
-body {
-  font: 100% variables.$font-stack;
-}
+body {  
+  font: 100% variables.$font-stack;  
+}  
 
 ### Compiling SASS/SCSS
 #### Tools for Compiling
@@ -107,3 +107,17 @@ To use SASS/SCSS, you need to compile it into standard CSS. This can be done usi
 Integrating SASS/SCSS compilation into your development workflow ensures that your styles are always up-to-date.
 
 By mastering these features of SASS/SCSS, you can create more efficient and manageable stylesheets that improve the maintainability and scalability of your projects.
+
+## Instructions on Set Up:
+
+Inside the alx-intermediate-frontend repository, create a new directory called 0x03-sass_scss
+
+### Linux installation (Optional)
+In your ubuntu terminal install node version 20.16 as follows:  
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash  
+Exit the terminal using the exit command then reopen it.  
+
+### Installation Anywhere (Optional)
+Install SASS by using the following command if you have node installed:  
+npm install sass -v 3.7.4  
+Create an empty file 0-installation-script.  
