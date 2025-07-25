@@ -116,6 +116,24 @@ body {
 }
 ```
 
+```
+nav {  
+  ul {  
+    margin: 0;  
+    padding: 0;  
+    list-style: none;  
+  }  
+  li {  
+    display: inline-block;  
+  }  
+  a {  
+    display: block;  
+    padding: 6px 12px;  
+    text-decoration: none;  
+  }  
+}
+```
+
 ### `3-mixin_margins.scss`
 
 Demonstrates the creation and usage of mixins for reusable code blocks.
