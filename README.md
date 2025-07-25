@@ -32,6 +32,7 @@ body {
 
 Nesting enables you to write CSS rules in a hierarchical structure that mirrors the HTML structure, improving readability and organization.
 
+```
 nav {  
   ul {  
     margin: 0;  
@@ -47,12 +48,14 @@ nav {
     text-decoration: none;  
   }  
 }  
+```
 
 ### Mixins and Functions
 #### Mixins
 
 Mixins allow you to create reusable chunks of CSS. You can pass arguments to mixins to make them more flexible.
 
+```
 @mixin theme($theme: DarkGray) {  
   background: $theme;  
   box-shadow: 0 0 1px rgba($theme, 0.25);  
@@ -65,11 +68,12 @@ Mixins allow you to create reusable chunks of CSS. You can pass arguments to mix
 .alert {  
   @include theme(DarkRed);  
 }  
+```
 
 #### Functions
 
 SASS functions let you perform calculations and return values. They are useful for creating dynamic styles.
-
+```
 @function double($number) {  
   @return $number * 2;  
 }  
@@ -77,14 +81,14 @@ SASS functions let you perform calculations and return values. They are useful f
 .box {  
   width: double(20px);  
 }  
-
+```
 ### Partials and Import
 #### Partials
 
 Partials are small SASS files that contain snippets of CSS. They are useful for organizing styles into modular, reusable pieces. A partial file name begins with an underscore (e.g., _variables.scss).
 
 Importing Partials You can import partials into your main SASS file using the @use or @import rule to keep your styles organized.
-
+```
 // styles.scss  
 @use 'variables';  
 @use 'mixins';  
@@ -92,7 +96,7 @@ Importing Partials You can import partials into your main SASS file using the @u
 body {  
   font: 100% variables.$font-stack;  
 }  
-
+```
 ### Compiling SASS/SCSS
 #### Tools for Compiling
 
